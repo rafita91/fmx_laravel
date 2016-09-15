@@ -5,6 +5,6 @@
 @endsection
 
 @section('content')
-    <h1>Hola, esto es bootstrap</h1>
-    <a href="" class="btn btn-success">Soy un botón de bootstrap</a>
+    <h1>Hola, esto es materialize</h1>
+    <a class="waves-effect waves-light btn">butón materialize</a>
 @endsection
