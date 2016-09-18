@@ -33,6 +33,7 @@
         <div class="row">
             <div class="input-field col s12">
                 {!! Form::submit('Registrar', ['class' => 'btn waves-effect deep-purple', 'name' => 'action']) !!}
+                <a class="waves-effect deep-purple btn" href="{{ route('users.index') }}">Listado</a>
             </div>
         </div>   
     {!! Form::close() !!}
