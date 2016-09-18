@@ -23,8 +23,8 @@
                     <td> {{ $user->name }} </td>
                     <td> {{ $user->type }} </td>
                     <td>  
-                        <a href='#'>1</a>
-                        <a href='#'>2</a>
+                        <a href='#'>editar</a>
+                        <a href='#'>eliminar</a>
                     </td>
                 </tr>
             @endforeach

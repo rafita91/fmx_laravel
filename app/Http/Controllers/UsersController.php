@@ -22,7 +22,7 @@ class UsersController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
         
-        dd($user);
+        return redirect()->route('users.index');
     }
     
     public function index()
