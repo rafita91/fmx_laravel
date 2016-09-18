@@ -23,6 +23,12 @@ class UsersController extends Controller
         $user->save();
         
         dd($user);
+    }
+    
+    public function index()
+    {
+        $users = User::orderBy('id', 'ASC')->paginate(5);
         
+        return view('admin.users.index')->with('users', $users);
     }
 }

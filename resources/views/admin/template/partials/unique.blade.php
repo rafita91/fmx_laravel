@@ -1,5 +1,5 @@
-<nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+<nav class="deep-purple" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">artelocal.mx</a>
     <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
     </ul>
@@ -10,11 +10,11 @@
     </div>
 </nav>
 <div class="container">
-    <section>
+    <section class='custom-section'>
         @yield('content')
     </section>
 </div>
-<footer class="page-footer orange">
+<footer class="page-footer deep-purple">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
