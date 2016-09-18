@@ -14,16 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-//
-//Route::group(['prefix' => 'articles'], function () {
-//    //test http://localhost:8000/articles/view/1
-//    Route::get('view/{id}', [
-//        'uses' => 'TestController@view',
-//        'as' => 'ArticlesView'
-//    ]);
-//});
 
 Route::group(['prefix' => 'admin'], function () {
+    /*
+     * Rutas asignadas al CRUD de usuarios
+     */
     Route::resource('users', 'UsersController');
     Route::get('users/{id}/destroy', [
         'uses' => 'UsersController@destroy',
@@ -33,6 +28,11 @@ Route::group(['prefix' => 'admin'], function () {
         'uses' => 'UsersController@edit',
         'as' => 'admin.users.edit'
     ]);
+    
+    /*
+     * Rutas asignadas al CRUD de Categorías
+     */
+    Route::resource('categories', 'CategoriesController');
 });
 
 
