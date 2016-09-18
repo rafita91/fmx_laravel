@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<a class="waves-effect deep-purple btn" href="{{ route('users.create') }}">Nuevo usuario</a>
 <div class='container'>
     <table class="table">
         <thead>

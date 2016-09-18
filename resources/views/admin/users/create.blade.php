@@ -32,7 +32,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                {!! Form::submit('Registrar', ['class' => 'btn waves-effect waves-light', 'name' => 'action']) !!}
+                {!! Form::submit('Registrar', ['class' => 'btn waves-effect deep-purple', 'name' => 'action']) !!}
             </div>
         </div>   
     {!! Form::close() !!}
