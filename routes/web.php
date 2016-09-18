@@ -14,12 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//
+//Route::group(['prefix' => 'articles'], function () {
+//    //test http://localhost:8000/articles/view/1
+//    Route::get('view/{id}', [
+//        'uses' => 'TestController@view',
+//        'as' => 'ArticlesView'
+//    ]);
+//});
 
-Route::group(['prefix' => 'articles'], function () {
-    //test http://localhost:8000/articles/view/1
-    Route::get('view/{id}', [
-        'uses' => 'TestController@view',
-        'as' => 'ArticlesView'
-    ]);
+Route::group(['prefix' => 'admin'], function () {
+   Route::resource('users', 'UsersController');
 });
+
 
