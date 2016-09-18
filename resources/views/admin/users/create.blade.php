@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    {!! Form::open(['route' => 'users.store', 'method' => 'store', 'class' => 'col s12']) !!} 
+    {!! Form::open(['route' => 'users.store', 'method' => 'POST', 'class' => 'col s12']) !!} 
         <div class="row">
             <div class="input-field col s12">
                 {!! Form::label('name', 'Nombre') !!}

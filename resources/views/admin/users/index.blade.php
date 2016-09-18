@@ -23,8 +23,8 @@
                     <td> {{ $user->name }} </td>
                     <td> {{ $user->type }} </td>
                     <td>  
-                        <a href='#'>editar</a>
-                        <a href='#'>eliminar</a>
+                        <a href='{{ route('admin.users.edit', $user->id) }}'>editar</a>
+                        <a href='{{ route('admin.users.destroy', $user->id) }}'>eliminar</a>
                     </td>
                 </tr>
             @endforeach
