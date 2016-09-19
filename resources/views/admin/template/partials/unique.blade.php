@@ -1,10 +1,12 @@
 <nav class="deep-purple" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">artelocal.mx</a>
     <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="{{ route('users.index') }}">Usuarios</a></li>
+        <li><a href="{{ route('categories.index') }}">Categorías</a></li>
     </ul>
     <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="{{ route('users.index') }}">Usuarios</a></li>
+        <li><a href="{{ route('categories.index') }}">Categorías</a></li>
     </ul>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
