@@ -33,6 +33,14 @@ Route::group(['prefix' => 'admin'], function () {
      * Rutas asignadas al CRUD de Categorías
      */
     Route::resource('categories', 'CategoriesController');
+    Route::get('categories/{id}/destroy', [
+        'uses' => 'CategoriesController@destroy',
+        'as' => 'admin.categories.destroy'
+    ]);
+    Route::get('categories/{id}/edit', [
+        'uses' => 'CategoriesController@edit',
+        'as' => 'admin.categories.edit'
+    ]);
 });
 
 

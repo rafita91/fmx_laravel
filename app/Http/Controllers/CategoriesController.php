@@ -25,7 +25,17 @@ class CategoriesController extends Controller
     {
         $category = new Category($request->all());
         $category->save();
-        dd('listo');
-        //return redirect()->route('category.index');
+        
+        return redirect()->route('categories.index');
+    }
+    
+    /*
+     * Listado de categorías con paginador
+     */
+    public function index()
+    {
+        $categories = Category::orderBy('id', 'DESC')->paginate(5);
+        
+        return view('admin.categories.index')->with('categories', $categories);
     }
 }
