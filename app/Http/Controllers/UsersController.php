@@ -20,7 +20,7 @@ class UsersController extends Controller
     }
     
     /*
-     * Guardar un usuario en vase de datos y redirigir al listado
+     * Guardar un usuario en base de datos y redirigir al listado
      */
     public function store(Request $request)
     {

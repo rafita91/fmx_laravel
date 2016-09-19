@@ -41,6 +41,19 @@ Route::group(['prefix' => 'admin'], function () {
         'uses' => 'CategoriesController@edit',
         'as' => 'admin.categories.edit'
     ]);
+    
+    /*
+     * Rutas asignadas al CRUD de Tags
+     */
+    Route::resource('tags', 'TagsController');
+    Route::get('tags/{id}/destroy', [
+        'uses' => 'TagsController@destroy',
+        'as' => 'admin.tags.destroy'
+    ]);
+    Route::get('tags/{id}/edit', [
+        'uses' => 'TagsController@edit',
+        'as' => 'admin.tags.edit'
+    ]);
 });
 
 
