@@ -3,10 +3,12 @@
     <ul class="right hide-on-med-and-down">
         <li><a href="{{ route('users.index') }}">Usuarios</a></li>
         <li><a href="{{ route('categories.index') }}">Categorías</a></li>
+        <li><a href="{{ route('tags.index') }}">Tags</a></li>
     </ul>
     <ul id="nav-mobile" class="side-nav">
         <li><a href="{{ route('users.index') }}">Usuarios</a></li>
         <li><a href="{{ route('categories.index') }}">Categorías</a></li>
+        <li><a href="{{ route('tags.index') }}">Tags</a></li>
     </ul>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
