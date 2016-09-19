@@ -38,4 +38,15 @@ class CategoriesController extends Controller
         
         return view('admin.categories.index')->with('categories', $categories);
     }
+    
+    /*
+     * Eliminar determinado usuario y redirigir al listado
+     */
+    public function destroy($id)
+    {
+        $category = Category::find($id);
+        $category->delete();
+        
+        return redirect()->route('categories.index');
+    }
 }

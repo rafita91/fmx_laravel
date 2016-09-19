@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+    <h4>
+        Crear usuario
+    </h4>
     {!! Form::open(['route' => 'users.store', 'method' => 'POST', 'class' => 'col s12']) !!} 
         <div class="row">
             <div class="input-field col s12">

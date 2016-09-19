@@ -3,6 +3,9 @@
 @section('title', 'Editar usuario' . $user->name)
     
 @section('content')
+    <h4>
+        Editar usuarios
+    </h4>
     {!! Form::open(['route' => ['users.update', $user->id], 'method' => 'PUT', 'class' => 'col s12']) !!} 
         <div class="row">
             <div class="input-field col s12">
