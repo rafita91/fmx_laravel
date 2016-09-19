@@ -39,5 +39,35 @@ class TagsController extends Controller
         return redirect()->route('tags.index');
     }
     
+    /*
+     * Eliminar determinado usuario y redirigir al listado
+     */
+    public function destroy($id)
+    {
+        $tag = Tag::find($id);
+        $tag->delete();
+        
+        return redirect()->route('tags.index');
+    }
     
+    /*
+     * Mandar los datos de tag a la vista de editar
+     */
+    public function edit($id)
+    {
+        $tag = Tag::find($id);
+        return view('admin.tags.edit')->with('tag', $tag);
+    }
+    
+    /*
+     * Actualizar tag de la vista de edit y redirigir al listado
+     */
+    public function update(Request $request, $id)
+    {
+        $tag = Tag::find($id);
+        $tag->fill($request->all());
+        $tag->save();
+        
+        return redirect()->route('tags.index');
+    }
 }
