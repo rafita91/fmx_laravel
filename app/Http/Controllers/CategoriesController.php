@@ -49,4 +49,25 @@ class CategoriesController extends Controller
         
         return redirect()->route('categories.index');
     }
+    
+    /*
+     * Mandar los datos de categoría a la vista de editar
+     */
+    public function edit($id)
+    {
+        $category = Category::find($id);
+        return view('admin.categories.edit')->with('category', $category);
+    }
+    
+    /*
+     * Actualizar categoría de la vista de edit y redirigir al listado
+     */
+    public function update(Request $request, $id)
+    {
+        $category = Category::find($id);
+        $category->fill($request->all());
+        $category->save();
+        
+        return redirect()->route('categories.index');
+    }
 }
