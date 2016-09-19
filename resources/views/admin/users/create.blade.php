@@ -29,7 +29,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                {!! Form::select('type', ['' => '--Seleccione un nivel--', 'member' => 'Miembro', 'admin' => 'Administrador']) !!}
+                {!! Form::select('type', ['member' => 'Miembro', 'admin' => 'Administrador']) !!}
                 {!! Form::label('type', 'Tipo') !!}
             </div>
         </div>
